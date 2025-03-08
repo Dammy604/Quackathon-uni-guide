@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ER Model - Parking Management (Retouched One-to-One)</title>
+  <style>
+    .entity-box {
+      fill: #f8f8f8;
+      stroke: black;
+      stroke-width: 2;
+    }
+    .diamond {
+      fill: #fff;
+      stroke: black;
+      stroke-width: 2;
+    }
+    .text {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <svg width="600" height="400">
+    <!-- Entities -->
+    <!-- Parking Area -->
+    <rect x="50" y="50" width="150" height="100" class="entity-box" />
+    <text x="55" y="65" class="text" font-weight="bold">Parking Area</text>
+    <text x="60" y="85" class="text">ParkingAreaID (PK)</text>
+    <text x="60" y="100" class="text">Name</text>
+    <text x="60" y="115" class="text">Location</text>
+    <text x="60" y="130" class="text">Capacity</text>
+    <text x="60" y="145" class="text">No. of Floors</text>
+
+    <!-- Parking Space -->
+    <rect x="400" y="50" width="150" height="100" class="entity-box" />
+    <text x="405" y="65" class="text" font-weight="bold">Parking Space</text>
+    <text x="410" y="85" class="text">SpaceID (PK)</text>
+    <text x="410" y="100" class="text">SpaceNumber</text>
+    <text x="410" y="115" class="text">ParkingAreaID (FK)</text>
+
+    <!-- Staff Member -->
+    <rect x="50" y="250" width="150" height="100" class="entity-box" />
+    <text x="55" y="265" class="text" font-weight="bold">Staff Member</text>
+    <text x="60" y="285" class="text">StaffID (PK)</text>
+    <text x="60" y="300" class="text">Name</text>
+    <text x="60" y="315" class="text">PhoneExtension</text>
+
+    <!-- Parking Request -->
+    <rect x="400" y="250" width="150" height="100" class="entity-box" />
+    <text x="405" y="265" class="text" font-weight="bold">Parking Request</text>
+    <text x="410" y="285" class="text">RequestID (PK)</text>
+    <text x="410" y="300" class="text">StaffID (FK)</text>
+    <text x="410" y="315" class="text">SpaceID (FK)</text>
+    <text x="410" y="330" class="text">RequestDate</text>
+    <text x="410" y="345" class="text">Status</text>
+
+    <!-- Relationships -->
+    <!-- 1. Contains: Parking Area to Parking Space (1 to Many) -->
+    <!-- Diamond for Contains -->
+    <polygon points="225,100 245,110 225,120 205,110" class="diamond" />
+    <text x="210" y="108" class="text">Contains</text>
+    <!-- Line from Parking Area to Contains diamond -->
+    <line x1="200" y1="100" x2="205" y2="110" stroke="black" stroke-width="2" />
+    <text x="190" y="95" class="text">1</text>
+    <!-- Line from Contains diamond to Parking Space -->
+    <line x1="245" y1="110" x2="400" y2="100" stroke="black" stroke-width="2" />
+    <text x="385" y="95" class="text">M</text>
+
+    <!-- 2. Makes: Staff Member to Parking Request (1 to Many) -->
+    <!-- Diamond for Makes -->
+    <polygon points="225,300 245,310 225,320 205,310" class="diamond" />
+    <text x="210" y="308" class="text">Makes</text>
+    <!-- Line from Staff Member to Makes diamond -->
+    <line x1="200" y1="300" x2="205" y2="310" stroke="black" stroke-width="2" />
+    <text x="190" y="295" class="text">1</text>
+    <!-- Line from Makes diamond to Parking Request -->
+    <line x1="245" y1="310" x2="400" y2="300" stroke="black" stroke-width="2" />
+    <text x="385" y="295" class="text">M</text>
+
+    <!-- 3. Reserves: Parking Request to Parking Space (One-to-One) -->
+    <!-- Here, we assume that at any given time a parking space is exclusively reserved by a single parking request -->
+    <!-- We place the diamond between the two related entities along the vertical axis -->
+    <!-- For vertical connection:
+           - Parking Space center: (475,100) with bottom center at (475,150)
+           - Parking Request center: (475,300) with top center at (475,250)
+           - Diamond centered at (475,200) -->
+    <polygon points="475,190 495,200 475,210 455,200" class="diamond" />
+    <text x="455" y="185" class="text">Reserves</text>
+    <!-- Line from Parking Space to Reserves diamond -->
+    <line x1="475" y1="150" x2="475" y2="190" stroke="black" stroke-width="2" />
+    <text x="480" y="145" class="text">1</text>
+    <!-- Line from Reserves diamond to Parking Request -->
+    <line x1="475" y1="210" x2="475" y2="250" stroke="black" stroke-width="2" />
+    <text x="480" y="255" class="text">1</text>
+  </svg>
+</body>
+</html>

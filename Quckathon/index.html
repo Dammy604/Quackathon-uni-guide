@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/index.css">
+    <title>University User Guide</title>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo"></div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">About </a></li>
+            <li><a href="index.html">Services </a></li>
+            <li><a href="index.html">Contact us</a></li>
+        </ul>
+
+        <div class="menu-toggle"></div>
+    </nav>
+
+    <section>
+        <div>
+            <h1>UNIVERSITY GUIDE FOR NEW STUDENTS</h1>
+            <div class="sect1">
+                <div class="grid-container">
+                    <a href="." class="uni-grid"><img src="assets/images/dundee logo only.png" alt="img 1" class="grid-img"></a>
+                    <a href="." class="uni-grid"><img src="assets/images/st.andrews logo.png" alt="img 1" class="grid-img"></a>
+                    <a href="." class="uni-grid"><img src="assets/images/dundee logo only.png" alt="img 1" class="grid-img"></a>
+                    <a href="." class="uni-grid"><img src="assets/images/dundee logo only.png" alt="img 1" class="grid-img"></a>
+                    <a href="." class="uni-grid"><img src="assets/images/dundee logo only.png" alt="img 1" class="grid-img"></a>
+                    <a href="." class="uni-grid"><img src="assets/images/dundee logo only.png" alt="img 1" class="grid-img"></a>
+    
+                </div>
+            </div>
+
+        </div>
+    </section><br>
+
+    <section>
+
+        <!--<div id="demo" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            </div>
+  
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets/images/dundee logo.jpg" alt="Los Angeles" class="d-block w-100 carousel-img">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/uni of st.andrews logo.jpg" alt="Chicago" class="d-block w-100 carousel-img">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/" alt="New York" class="d-block w-100 carousel-img">
+                </div>
+            </div>
+  
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>-->
+  
+
+        <!--<div class="carousel-container">
+            <div class="carousel-slide">
+                <a href="./"><img src="assets/images/dundee logo.jpg" alt=""></a>
+                <a href="./"><img src="" alt=""></a>
+                <a href="./"><img src="" alt=""></a>
+                <a href="./"><img src="" alt=""></a>
+                <a href="./"><img src="" alt=""></a>
+            </div>
+
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+
+            <div class="dots">
+                <span class="dot" onclick="currentSlide(0)"></span>
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+            </div>
+        </div>-->
+
+    </section><br>
+
+    <section>
+        <div class="form-container">
+            <form action="#" method="post">
+
+                <label for="name" class="label">Full name</label>
+                <input class="name-input" id="name" type="text" name="" placeholder="e.g John Smith" required>
+
+
+                <label for="name" class="label">Location</label>
+                <input class="name-input" id="name" type="text" name="" placeholder="location of school" required>
+
+                <label for="name" class="label">Level of study</label>
+                <select id="dropdown" onchange="updateInput()">
+                    <option value="">-- Select an option --</option>
+                    <option value="Option 1">Option 1</option>
+                    <option value="Option 2">Option 2</option>
+                    <option value="Option 3">Option 3</option>
+                    <option value="Other">Other (Type below)</option>
+                </select>
+
+                <label for="name" class="label">Enter your full name</label>
+                <input class="name-input" id="name" type="text" name="" placeholder="e.g John Smith" required>
+
+                <button type="button" class="submit">Submit </button>
+            </form>
+        </div>
+    </section><br>
+
+    <div class="chat-container">
+        <div class="chat-box" id="chat-box">
+            <div class="bot-message">Hello! How can I help you?</div>
+        </div>
+        <input type="text" id="user-input" placeholder="Type your message..." />
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

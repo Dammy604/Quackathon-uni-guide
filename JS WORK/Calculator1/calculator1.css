@@ -1,0 +1,33 @@
+.num{
+    background-color: aliceblue;
+    font-size: medium;
+    border-radius: 5px;
+    width: 160px;
+    height: 35px;
+    cursor: pointer;
+
+
+}
+
+.op{
+    background-color: white;
+    color: black;
+    font-size: medium;
+    font-family: monospace;
+    border-radius: 5px;
+    width: auto;
+    height: max-content;
+    /*padding: 3px;*/
+    border-color: black;
+    padding: 5px 10px;
+
+}
+
+.op:hover{
+    background-color: #438511;
+    color: white;
+    transform: scale(1.2);
+    transition: transform 0.3 ease;
+    border-color: black;
+    
+}
