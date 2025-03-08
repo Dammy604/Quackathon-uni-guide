@@ -13,7 +13,7 @@ jwt = JWTManager(app)
 app.config['SESSION_TYPE'] = redis
 app.config['SESSION_PERMANENT'] = False
 CORS(app)
-red = redis.StrictRedis(host='redis', port=6379, db=0, decode_responses=True)
+red = redis.StrictRedis(host='35.192.222.77', port=6379, db=0, decode_responses=True)
 socket = SocketIO(app, cors_allowed_origin="*")
 
 uni_dict = {}
